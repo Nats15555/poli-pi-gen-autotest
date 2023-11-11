@@ -6,6 +6,7 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,7 @@ public class TestAddPhoto extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на добавления фото к себе")
+    @Description("Тест на добавления фото к себе")
     @Test
     public void addNewPhoto() {
         assertTrue(mainPage.openPhotoPage()

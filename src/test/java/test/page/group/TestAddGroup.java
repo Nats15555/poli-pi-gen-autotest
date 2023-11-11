@@ -1,5 +1,6 @@
 package test.page.group;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ public class TestAddGroup extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на возможность подписаться на группу")
+    @Description("Тест на возможность подписаться на группу")
     @Test
     public void addGroup() {
         assertTrue(mainPage.openGroupPage().subscribeToGroup().checkSubscribeToGroup());

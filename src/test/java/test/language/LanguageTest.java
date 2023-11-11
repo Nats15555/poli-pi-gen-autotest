@@ -1,5 +1,6 @@
 package test.language;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,7 @@ public class LanguageTest extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на смену языка")
+    @Description("Тест на смену языка")
     @Test
     public void c() {
         assertTrue(mainPage.clickLanguageList().clickLanguageEng().chekLanguage("English"));

@@ -1,5 +1,6 @@
 package test.page.message;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class TestSendMessageUser extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на отправку рандомного сообщения другу")
+    @Description("Тест на отправку рандомного сообщения другу")
     @Timeout(5)
     @Test
     public void sendMessage() {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ public class TestAddMusic extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на добавления 3 песен к себе")
+    @Description("Тест на добавления 3 песен к себе")
     @Test
     public void addThreeSongs() {
         MusicPage musicPage = mainPage.openMusicOnMainPage();

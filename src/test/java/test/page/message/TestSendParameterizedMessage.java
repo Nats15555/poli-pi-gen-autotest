@@ -1,5 +1,6 @@
 package test.page.message;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,7 +16,7 @@ public class TestSendParameterizedMessage extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на отправку сообщений использую параметризацию")
+    @Description("Тест на отправку сообщений использую параметризацию")
     @ParameterizedTest
     @ValueSource(strings = {"Это сообщение для теста 1", "Это сообщение для теста 2"})
     public void sendValueSourceMessages(String message) {
