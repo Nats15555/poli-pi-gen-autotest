@@ -19,7 +19,7 @@ public class TestLoginPage extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @Description("Eng Тест на авторизацию")
+    @Description("Тест на авторизацию")
     @Owner("Nikolay Borisenko")
     @Test
     public void authorization() {

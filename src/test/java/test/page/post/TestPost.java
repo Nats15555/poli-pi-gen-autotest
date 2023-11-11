@@ -1,5 +1,6 @@
 package test.page.post;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class TestPost extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на выкладывание поста")
+    @Description("Тест на выкладывание поста")
     @Test
     public void addNewPost() {
         assertTrue(mainPage.openPostPage().cratePost(post).checkPostDisplay(post));

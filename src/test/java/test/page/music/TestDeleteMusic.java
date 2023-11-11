@@ -2,6 +2,7 @@ package test.page.music;
 
 import java.util.List;
 
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class TestDeleteMusic extends AbstractTest {
         mainPage = loginPage.doLogin(user);
     }
 
-    @DisplayName("Тест на удаление песен, которые были переданы")
+    @Description("Тест на удаление песен, которые были переданы")
     @Test
     public void deleteSongs() {
         MusicPage musicPage = mainPage.openMusicOnMainPage();
