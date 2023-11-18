@@ -17,7 +17,7 @@ public class LanguageTest extends AbstractTest {
 
     @Description("Тест на смену языка")
     @Test
-    public void c() {
+    public void languageTest() {
         assertTrue(mainPage.clickLanguageList().clickLanguageEng().chekLanguage("English"));
         mainPage.clickLanguageList().clickLanguageRu();
     }

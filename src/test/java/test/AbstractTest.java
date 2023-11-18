@@ -2,9 +2,7 @@ package test;
 
 
 import data.login.User;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -27,7 +25,7 @@ public abstract class AbstractTest {
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
         mainPage = new MainPage(driver);

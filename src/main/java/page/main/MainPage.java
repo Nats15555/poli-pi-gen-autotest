@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import data.login.User;
 import data.post.Post;
 import page.LoadableComponent;
+import page.friend.FriendPage;
 import page.group.GroupPage;
 import page.login.LoginPage;
 import page.message.MessageFactory;
@@ -32,6 +33,7 @@ public class MainPage implements LoadableComponent {
     private final By languageEng = By.xpath("//*[@id=\"hook_Form_PopLayerChooseNewLanguageForm\"]/form/div/a[1]");
     private final By languageRu = By.xpath("//*[@id=\"hook_Form_PopLayerChooseNewLanguageForm\"]/form/div/div");
     private final By xpathSettings = By.xpath("//*[contains(@data-l,\"t,closed_profile\")]");
+    private final By logo = By.xpath("//*[@id=\"topPanelLeftCorner\"]");
     private PostBlock postBlock = null;
 
     public MainPage(WebDriver driver) {
@@ -42,6 +44,13 @@ public class MainPage implements LoadableComponent {
         chekLoadComponent(driver, 5, By.xpath(MainPageRightNavigator.PAGE.getXpath() + "/div"));
         return driver.findElement(By.xpath(MainPageRightNavigator.PAGE.getXpath() + "/div")).getText().equals(user.getNameAndSurname());
     }
+
+    public boolean clickByLogo() {
+        chekLoadComponent(driver, 5, logo);
+        driver.findElement(logo).click();
+        return true;
+    }
+
 
     public LoginPage logOut() {
         chekLoadComponent(driver, 5, xpathTopBar);
@@ -84,6 +93,12 @@ public class MainPage implements LoadableComponent {
         chekLoadComponent(driver, 5, By.xpath(MainPageRightNavigator.GROUPS.getXpath()));
         driver.findElement(By.xpath(MainPageRightNavigator.GROUPS.getXpath())).click();
         return new GroupPage(driver);
+    }
+
+    public FriendPage openFriendPage() {
+        chekLoadComponent(driver, 5, By.xpath(MainPageRightNavigator.FRIENDS.getXpath()));
+        driver.findElement(By.xpath(MainPageRightNavigator.FRIENDS.getXpath())).click();
+        return new FriendPage(driver);
     }
 
     @Deprecated
